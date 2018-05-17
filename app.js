@@ -345,7 +345,7 @@ OPTIONS.forEach(key => {
   document.getElementById(key).oninput = reloadMap;
 });
 
-d3.csv("/data/wyniki_rejs.csv", function(error, downloadedData) {
+d3.csv("https://katostrynska.github.io/data/wyniki_rejs.csv", function(error, downloadedData) {
   if (error) throw error;
   data = downloadedData;
   reloadMap();
