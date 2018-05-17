@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://unpkg.com/deck.gl@latest/deckgl.min.js"></script>
+    <!-- optional if mapbox base map is needed -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://d3js.org/d3-collection.v1.min.js"></script>
+    <script src="https://d3js.org/d3-dispatch.v1.min.js"></script>
+    <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
+    <script src="https://d3js.org/d3-request.v1.min.js"></script>
+
+    <script src="js/nouislider.min.js"></script>
+    <link href='css/nouislider.css' rel='stylesheet' />
+
+    <link rel="stylesheet" href="css/stylesheet.css">
+
+</head>
+<body>
+    <div id="container"></div>
+
+    <div id="control-panel">
+        <div>
+          <label>Radius</label>
+          <input id="radius" type="range" min="1" max="1000" step="5" value="100"></input>
+          <span id="radius-value"></span>
+        </div>
+        <div id="value-slider"></div>
+        <span id="value-slider-value-min"></span>
+        <span id="value-slider-value-max"></span>
+        <!-- <div>
+          <label>Coverage</label>
+          <input id="coverage" type="range" min="0" max="1" step="0.1" value="1"></input>
+          <span id="coverage-value"></span>
+        </div>
+        <div>
+          <label>Upper Percentile</label>
+          <input id="upperPercentile" type="range" min="90" max="100" step="1" value="100"></input>
+          <span id="upperPercentile-value"></span>
+        </div> -->
+      </div>
+
+      <div id="info-panel">
+        <div>
+            <label id="latitude-label">Latitude:</label>
+            <span id="latitude-value">--.---</span>
+        </div>
+        <div>
+            <label id="longitude-label">Longitude:</label>
+            <span id="longitude-value">--.---</span>
+        </div>
+        <div>
+            <label id="selected-value-label">Temperature:</label>
+            <span id="selected-value">-----</span>
+        </div>
+      </div>
+
+      <div id="buttons-panel">
+        <button id="temperature-button" class="panel-button">Temperature</button>
+        <button id="humidity-button" class="panel-button">Humidity</button>
+        <button id="pm1-button" class="panel-button">PM1</button>
+        <button id="pm2_5-button" class="panel-button">PM2.5</button>
+        <button id="pm10-button" class="panel-button">PM10</button>
+      </div>
+
+    <script src='app.js'></script>
+</body>
+</html>
